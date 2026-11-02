@@ -1182,33 +1182,16 @@ case "$DEVICE" in
 
     "fortuna3g")
         sed -i \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/aboot mmcblk0p5 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/apnhlos mmcblk0p1 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/backup mmcblk0p19 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/boot mmcblk0p16 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/cache mmcblk0p25 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/ddr mmcblk0p4 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/efs mmcblk0p13 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/fota mmcblk0p18 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/fsc mmcblk0p20 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/fsg mmcblk0p9 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/hidden mmcblk0p26 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/modem mmcblk0p2 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/modemst1 mmcblk0p14 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/modemst2 mmcblk0p15 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/pad mmcblk0p11 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/param mmcblk0p12 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/persdata mmcblk0p23 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/persist mmcblk0p22 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/qhee mmcblk0p8 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/qsee mmcblk0p7 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/recovery mmcblk0p17 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/rpm mmcblk0p6 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/sbl1 mmcblk0p3 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/sec mmcblk0p10 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/ssd mmcblk0p21 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/system mmcblk0p24 ' \
-            -e 's block/platform/soc.0/7824900.sdhci/by-name/userdata mmcblk0p27 ' \
+            -e 's block/bootdevice/by-name/system mmcblk0p24 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p27 ' \
+            -e 's block/bootdevice/by-name/cache mmcblk0p25 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p22 ' \
+            -e 's block/bootdevice/by-name/boot mmcblk0p16 ' \
+            -e 's block/bootdevice/by-name/recovery mmcblk0p17 ' \
+            -e 's block/bootdevice/by-name/fota mmcblk0p18 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p2 ' \
+            -e 's block/bootdevice/by-name/apnhlos mmcblk0p1 ' \
+            -e 's block/bootdevice/by-name/efs mmcblk0p13 ' \
             "$@"
         ;;
 
